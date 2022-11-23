@@ -3,19 +3,12 @@ import {DropDownListComponent} from '@syncfusion/ej2-react-dropdowns';
 import './App.css';
 import { motion } from "framer-motion";
 
-
-
-//function App() {
-  //const t = fetch('https://lukrgatt.reykjavik.is/server/rest/services/OpinGognThjonusta/Bunadur_a_stofnanalodum/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
-  //console.log(t);
-//}
-
 function App() {
 
   const [open, setOpen] = useState(false); // By default the drop down is not open (dropdown open = false)
   
   //Start of closing dropdown menu when clicking outside of the menu
-  let menuRef = useRef(); 
+  let menuRef = useRef();
 
   useEffect(() => {
     let handler = (e)=>{
