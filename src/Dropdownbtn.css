@@ -1,0 +1,132 @@
+.App {
+    text-align: center;
+  }
+  
+  ul{
+    list-style: none;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  .menu-container{ /*póstnúmerin í dropdown*/
+    font-size: 16px;
+  }
+  
+  /*.menu-trigger input*/
+  .menu-trigger {
+    position: absolute;
+    margin: auto;
+    font-size: 16px;
+    border: solid rgb(96, 96, 96);
+    border-radius: 10px;
+    bottom: 200px;
+    left: 300px;
+    right: 300px;
+    padding: 10px;
+    width: 200px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .menu-trigger {
+      width: 250px;
+      padding: 15px;
+    }
+  }
+  
+  @media only screen and (min-width: 900px) {
+    .menu-trigger {
+      width: 300px;
+      padding: 15px;
+    }
+  }
+  
+  @media only screen and (min-width: 1050px) {
+    .menu-trigger {
+      width: 400px;
+      padding: 15px;  
+    }
+  }
+  
+  .dropdown-menu{
+    position: absolute;
+    margin: auto;
+    bottom: 245px;
+    left: 300px;
+    right: 300px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 200px;
+    height: 10px;
+  }
+  
+  .dropdown-menu ul{
+    border: solid rgb(96, 96, 96);
+    border-radius: 10px;
+  }
+  
+  .dropdown-menu ul li{
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .dropdown-menu ul li:hover a{
+    color: brown;
+    cursor: pointer;
+  }
+  
+  .dropdownItem{
+    display: flex;
+    margin: 10px auto;
+  }
+  
+  .dropdownItem a{
+    max-width: 100px;
+    margin-left: 10px;
+    transition: var(--speed);
+  }
+  
+  .dropdown-menu::before{
+    position: absolute;
+    top: -5px;
+    right: 20px;
+    height: 20px;
+    width: 20px;
+    transform: rotate(45deg);
+  }
+  
+  .dropdown-menu.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: var(--speed) ease;
+    animation: mymove 1s forwards;
+    overflow: hidden;
+  }
+  
+  @keyframes mymove {
+    from {height: 10px;}
+    to {height: 300px;}
+  }
+  
+  .dropdown-menu.slide{
+    animation: slideLeft 1s forwards, mymove 1s forwards;
+    height: 300px;
+  
+  }
+  
+  @keyframes slideLeft {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
+  
+  .dropdown-menu.inactive{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: var(--speed) ease;
+  }
+  
+  
+  
