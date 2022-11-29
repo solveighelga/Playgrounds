@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 
 
 //components
-import Card from './Card';
+import Cards from './Cards';
 const Home = () => {
     const [fetchError, setFetchError] = useState(null)
     const [playgrounds, setPlaygrounds] = useState(null)
