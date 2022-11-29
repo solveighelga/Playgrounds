@@ -14,9 +14,15 @@ function App() {
         <Dropdown />
       </div>
       <div className='Icons'>
-      <img src={swingIconMobile}></img>
-      <img src={footballIconMobile}></img>
-      <img src={jumppadIconMobile}></img>
+        <div className='swing'>
+          <img src={swingIconMobile}></img>
+        </div>
+        <div className='football'>
+          <img src={footballIconMobile}></img>
+        </div>
+        <div className='jumppad'>
+          <img src={jumppadIconMobile}></img>
+        </div>
     </div>
       <div className='Cards'>
         <Cards />

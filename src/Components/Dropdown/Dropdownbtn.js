@@ -44,7 +44,7 @@ function App() {
             <DropdownItem text = {'Seltjarnarnes'} />
             <DropdownItem text = {'Garðabær'} />
             <DropdownItem text = {'Hafnarfjörður'} />
-            <DropdownItem text = {'Modfellsbær'} />
+            <DropdownItem text = {'Mosfellsbær'} />
           </ul>
           
         </div> 
