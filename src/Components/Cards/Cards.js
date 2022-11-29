@@ -1,6 +1,6 @@
-import './App.css';
+import '../../App.css';
 import './Cards.scss';
-import './Images.css';
+import '../../Images/swingIconMobile.svg'
 import React, {useState} from 'react';
 
 
