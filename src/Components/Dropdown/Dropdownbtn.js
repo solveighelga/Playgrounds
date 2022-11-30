@@ -1,8 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react';
-import {DropDownListComponent} from '@syncfusion/ej2-react-dropdowns';
-import './App.css';
-import { motion } from "framer-motion";
-
+/*import {DropDownListComponent} from '@syncfusion/ej2-react-dropdowns';*/
+import './Dropdownbtn.css'
 
 
 //function App() {
@@ -36,16 +34,17 @@ function App() {
     <div className='App'>
       <div className='menu-container' ref={menuRef}> 
         <div className='menu-trigger' onClick={()=>{setOpen(!open)}}> 
-          Search Postal Code in Reykjavik
+          Search Area
         </div>
       
         <div className={`dropdown-menu ${open? 'active' : 'inactive'}`}>
           <ul>
-            <DropdownItem text = {'101'} />
-            <DropdownItem text = {'105'} />
-            <DropdownItem text = {'108'} />
-            <DropdownItem text = {'109'} />
-            <DropdownItem text = {'112'} />
+            <DropdownItem text = {'Reykjavík'} />
+            <DropdownItem text = {'Kópavogur'} />
+            <DropdownItem text = {'Seltjarnarnes'} />
+            <DropdownItem text = {'Garðabær'} />
+            <DropdownItem text = {'Hafnarfjörður'} />
+            <DropdownItem text = {'Mosfellsbær'} />
           </ul>
           
         </div> 
