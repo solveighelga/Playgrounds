@@ -95,7 +95,6 @@
   .dropdown-menu.slide{
     animation: slideLeft 1s forwards, mymove 1s forwards;
     height: 300px;
-  
   }
   
   @keyframes slideLeft {
