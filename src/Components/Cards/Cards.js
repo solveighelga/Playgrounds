@@ -1,54 +1,29 @@
 import '../../App.css';
 import './Cards.scss';
-import React, {useState} from 'react';
 
-
-
-
-function App() {
-  const [cards] = useState([
-    {
-      title: 'card-1',
-      text: `Some silly text here`
-    },
-    {
-      title: 'card-2',
-      text: `Some silly text here`
-    },
-    {
-      title: 'card-3',
-      text: `Some silly text here`
-    },
-    {
-      title: 'card-4',
-      text: `Some silly text here`
-    },
-    {
-      title: 'card-5',
-      text: `Some silly text here`
-    },
-    {
-      title: 'card-6',
-      text: `Some silly text here`
-    },
-  ])
-  return (
-    <div>
-    <section>
-      <div className='container'>
-        <div className='cards'>
-          {cards.map((card, i) =>(
-          <div key={i} className='card'>
-            <h3>{ card.title }</h3>
-            <p>{card.text}</p>
+  const Card = ({ playground }) => {
+    return (
+      <div>
+        <section>
+          <div className='container'>
+            <div className='cards'>
+              <div className='card'>
+                <p>{playground.name}</p>
+                <p>{playground.address} {playground.postal} {playground.city}</p>
+                <div className='img'>
+                  <img className='imgURL' src={playground.photoURL}></img>
+                  <div className='map'></div>
+                </div>
+              </div>
+            </div>
           </div>
-          ))}
-        </div>
+        </section>
       </div>
-    </section>
-  </div>
-  )
-}
+    )  
+  }
+  
+
+
 
 
 
@@ -71,4 +46,4 @@ function App() {
       </svg>*/
 
 
-export default App;
+export default Card;

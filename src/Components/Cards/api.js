@@ -1,10 +1,8 @@
-import supabase from "./config/supabaseClient"
+import supabase from '../../supabaseClient'
 import { useEffect, useState } from 'react'
+import Card from './Cards'
 
-
-//components
-import Cards from './Cards';
-const Home = () => {
+const Api = () => {
     const [fetchError, setFetchError] = useState(null)
     const [playgrounds, setPlaygrounds] = useState(null)
 
@@ -36,7 +34,7 @@ const Home = () => {
                 <div className ="playgrounds">
                     <div className="playground-grid"> </div>
                     {playgrounds.map(playground => (
-                        <Card key ={playgrounds.id} playground={playground} />
+                        <Card key ={playground.pid} playground={playground} />
                     ))}
                 </div>
             )}
@@ -45,4 +43,4 @@ const Home = () => {
     )
 }
 
-export default api
+export default Api
