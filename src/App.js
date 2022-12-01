@@ -25,7 +25,7 @@ function App() {
           <img src={jumppadIconMobile}></img>
         </div>
       </div>
-      <div className='callMe'>
+      <div className='Card'>
         <Api />
       </div>
     </div>
