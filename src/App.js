@@ -10,7 +10,8 @@ import logo from './Images/PLAYGROUNDS.svg'
 import logo2 from './Images/PLAY.svg'
 import React, {useState} from 'react';
 import Dropdown from './Components/Dropdown/Dropdownbtn.js'
-import Cards from './Components/Cards/Cards.js'
+import supabase from './supabaseClient';
+import Api from './Components/Cards/api';
 
 function App() {
 
@@ -64,10 +65,10 @@ console.log (window.screen.width)
             <img onClick={changejIcon} src={jIcon}></img>
           </div>
         </div>
-    </div>
-      <div className='Cards'>
-        <Cards />
-    </div>
+      </div>
+      <div className='Card'>
+        <Api />
+      </div>
     </div>
   );
 }
