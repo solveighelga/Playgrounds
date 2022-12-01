@@ -10,7 +10,7 @@ import './Cards.scss';
               <div className='card'>
                 <p>{playground.name}</p>
                 <p>{playground.address} {playground.postal} {playground.city}</p>
-                <div className='img'>
+                <div className='cardImg'>
                   <img className='imgURL' src={playground.photoURL}></img>
                   <div className='map'></div>
                 </div>
