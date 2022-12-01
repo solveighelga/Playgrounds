@@ -31,24 +31,24 @@ function App() {
   //end of closing dropdown by clicking outside the menu
 
   return (
-    <div className='App'>
-      <div className='menu-container' ref={menuRef}> 
-        <div className='menu-trigger' onClick={()=>{setOpen(!open)}}> 
-          Search Area
-        </div>
-      
-        <div className={`dropdown-menu ${open? 'active' : 'inactive'}`}>
-          <ul>
-            <DropdownItem text = {'Reykjavík'} />
-            <DropdownItem text = {'Kópavogur'} />
-            <DropdownItem text = {'Seltjarnarnes'} />
-            <DropdownItem text = {'Garðabær'} />
-            <DropdownItem text = {'Hafnarfjörður'} />
-            <DropdownItem text = {'Mosfellsbær'} />
-          </ul>
-          
-        </div> 
+      <div className='App'>
+        <div className='menu-container' ref={menuRef}> 
+          <div className='menu-trigger' onClick={()=>{setOpen(!open)}}> 
+            Search Area
+          </div>
         
+          <div className={`dropdown-menu ${open? 'active' : 'inactive'}`}>
+            <ul>
+              <DropdownItem text = {'Reykjavík'} />
+              <DropdownItem text = {'Kópavogur'} />
+              <DropdownItem text = {'Seltjarnarnes'} />
+              <DropdownItem text = {'Garðabær'} />
+              <DropdownItem text = {'Hafnarfjörður'} />
+              <DropdownItem text = {'Mosfellsbær'} />
+            </ul>
+            
+          </div> 
+          
         </div>
       </div>
     );

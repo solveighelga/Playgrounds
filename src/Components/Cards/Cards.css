@@ -17,10 +17,21 @@ body {
 
 .swing, .football, .jumppad {
   margin: 40px 20px 15px 20px;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
 }
 
+/*.grow img{
+  transition: 1s ease;
+  }
+
+  .grow img:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 1s ease;
+  }*/
 /*container around cards*/
 .container {
   max-width: 1300px;
@@ -33,9 +44,19 @@ section {
   align-items: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 805px) {
   .section {
     flex-direction: column;
+  }
+  .swing, .football, .jumppad {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .swing, .football, .jumppad {
+    width: 80px;
+    height: 80px;
   }
 }
 .cards {
@@ -58,6 +79,7 @@ section {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 18px;
   margin-right: 25px;
+  cursor: pointer;
 }
 
 /*@media only screen and (min-width: 768px) {
