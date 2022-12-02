@@ -8,12 +8,16 @@ import footballIconMobile2 from './Images/footballIconMobile2.svg'
 import jumppadIconMobile2 from './Images/jumppadIconMobile2.svg'
 import logo from './Images/PLAYGROUNDS.svg'
 import logo2 from './Images/PLAY.svg'
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Dropdown from './Components/Dropdown/Dropdownbtn.js'
 import supabase from './supabaseClient';
 import Api from './Components/Cards/api';
 
 function App() {
+// These states are used as props in the api and dropdown components here below
+  const [playgrounds, setPlaygrounds] = useState([]); 
+  const [filterPlaygrounds, setFilterPlaygrounds] = useState([]); 
+  console.log(filterPlaygrounds);
 
 /*Clickable feature of swing, football and jumppad icons*/
   const [sIcon, setsIcon] = useState(swingIconMobile);
@@ -50,7 +54,8 @@ console.log (window.screen.width)
           
         </div>
         <div className='Dropdown'>
-          <Dropdown />
+          {/* this is referencing the compnent in dropdown.js */}
+          <Dropdown playgrounds={playgrounds} setFilterPlaygrounds={setFilterPlaygrounds} />
       </div>
       </div>
       <div className='Icons'>
@@ -67,7 +72,8 @@ console.log (window.screen.width)
         </div>
       </div>
       <div className='Card'>
-        <Api />
+        {/* this is referencing the compnent in api.js (props used in api.js) */}
+        <Api playgrounds={filterPlaygrounds} setPlaygrounds={setPlaygrounds} setFilterPlaygrounds={setFilterPlaygrounds} hasFilter={playgrounds.length!=filterPlaygrounds.length}/>
       </div>
     </div>
   );

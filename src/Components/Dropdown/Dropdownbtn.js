@@ -8,10 +8,17 @@ import './Dropdownbtn.css'
   //console.log(t);
 //}
 
-function App() {
+// The dropdown component
+function Dropdown({playgrounds, setFilterPlaygrounds}) {
 
   const [open, setOpen] = useState(false); // By default the drop down is not open (dropdown open = false)
-  
+  const filter = (postal)=>{
+    const postalSelect = playgrounds.filter(playground => playground.postal == postal);
+    setFilterPlaygrounds(postalSelect);
+    setOpen(!open);
+    console.log(postal);
+  }
+
   //Start of closing dropdown menu when clicking outside of the menu
   let menuRef = useRef(); 
 
@@ -31,20 +38,18 @@ function App() {
   //end of closing dropdown by clicking outside the menu
 
   return (
-      <div className='App'>
+      <div>
         <div className='menu-container' ref={menuRef}> 
           <div className='menu-trigger' onClick={()=>{setOpen(!open)}}> 
-            Search Area
+          {/* The first city in our API (Reykjavík) will appear on the drop down */}
+            {playgrounds.length? playgrounds[0].city: null}
           </div>
         
           <div className={`dropdown-menu ${open? 'active' : 'inactive'}`}>
             <ul>
-              <DropdownItem text = {'Reykjavík'} />
-              <DropdownItem text = {'Kópavogur'} />
-              <DropdownItem text = {'Seltjarnarnes'} />
-              <DropdownItem text = {'Garðabær'} />
-              <DropdownItem text = {'Hafnarfjörður'} />
-              <DropdownItem text = {'Mosfellsbær'} />
+              {/* added the function to the onClick to filter to filter and find 101 and 104 in our API */}
+              <li onClick={()=>{filter('101')}}><DropdownItem text = {'101 - Downtown'}/></li> 
+              <li onClick={()=>{filter('104')}}><DropdownItem text = {'104'}/></li>
             </ul>
             
           </div> 
@@ -62,4 +67,4 @@ function DropdownItem(props){
   );
 }
 
-export default App;
+export default Dropdown;
