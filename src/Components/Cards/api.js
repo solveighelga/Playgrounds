@@ -2,9 +2,9 @@ import supabase from '../../supabaseClient'
 import { useEffect, useState } from 'react'
 import Card from './Cards'
 
-const Api = () => {
+// these props act as a parameter to the function
+const Api = ({playgrounds, setPlaygrounds, setFilterPlaygrounds, hasFilter}) => {
     const [fetchError, setFetchError] = useState(null)
-    const [playgrounds, setPlaygrounds] = useState(null)
 
     useEffect(() => {
         const fetchPlaygrounds = async () => {
@@ -20,6 +20,7 @@ const Api = () => {
                 if (data) {
                     setPlaygrounds(data)
                     setFetchError(null)
+                    setFilterPlaygrounds(data)
                 }
         }
 
@@ -31,7 +32,9 @@ const Api = () => {
         <div>
             {fetchError && (<p>{fetchError}</p>)}
             {playgrounds && (
-                <div className ="playgrounds">
+                <div className ="playgrounds"> 
+                {/* If filtered the postal code and neighborhood will appear if not, then it is empty */}
+                <div className ="filter">{hasFilter? playgrounds[0].postal + " - " + playgrounds[0].neighborhood: null}</div>
                     <div className="playground-grid"> </div>
                     {playgrounds.map(playground => (
                         <Card key ={playground.pid} playground={playground} />
