@@ -12,6 +12,7 @@ import React, {useState} from 'react';
 import Dropdown from './Components/Dropdown/Dropdownbtn.js'
 import supabase from './supabaseClient';
 import Api from './Components/Cards/api';
+/*import Overlay from './Components/Overlay.js'*/
 
 function App() {
 
@@ -37,7 +38,6 @@ function App() {
     else {setjIcon(jumppadIconMobile2)}
     }
 
-console.log (window.screen.width)
   return (
     <div className='App'>
       <div className='nav-bar'>

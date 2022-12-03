@@ -1,0 +1,34 @@
+.overlayPage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+ 
+}
+
+.overlayWindow{
+    display: block;
+    position:fixed;
+    background: white;
+    width: 40%;
+    min-height: auto;
+    height: auto;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding-bottom: 4%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 17px rgb(0, 0, 0, 0.2);
+    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+
+}
+.closebtn {
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 8px;
+    position: absolute;
+    right: 2rem;
+    padding-top: 12px;
+}
