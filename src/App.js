@@ -12,7 +12,8 @@ import React, {useState, useEffect} from 'react';
 import Dropdown from './Components/Dropdown/Dropdownbtn.js'
 import supabase from './supabaseClient';
 import Api from './Components/Cards/api';
-/*import Overlay from './Components/Overlay.js'*/
+import Overlay from './Components/Overlay/Overlay.js'
+import Expand from './Components/Overlay/Expand.js';
 
 function App() {
 // These states are used as props in the api and dropdown components here below
@@ -74,11 +75,11 @@ function App() {
       <div className='Card'>
         {/* this is referencing the compnent in api.js (props used in api.js) */}
         <Api playgrounds={filterPlaygrounds} setPlaygrounds={setPlaygrounds} setFilterPlaygrounds={setFilterPlaygrounds} hasFilter={playgrounds.length!=filterPlaygrounds.length}/>
+            <Overlay></Overlay>
       </div>
     </div>
   );
 }
-
 
 
 export default App;
