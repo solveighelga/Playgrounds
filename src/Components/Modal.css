@@ -1,0 +1,64 @@
+.modal {
+    width: 356px;
+    height: 632px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    margin-left: 10px;
+}
+
+.address {
+    margin-top: 20px;
+}
+
+.photo {
+    margin: 20px;
+}
+
+.icons10 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 250px;
+    justify-content: space-between;
+}
+
+.regularswing {
+    margin: 20px;
+}
+
+.slide {
+    margin: 20px;
+}
+
+.rocker {
+    margin: 20px;
+}
+
+
+@media only screen {
+    .modal {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+}
+
+@media only screen and (min-width: 805px) {
+    .modal {
+
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .modal {
+        max-width: 1800px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+    }
+}
