@@ -73,12 +73,13 @@
     height: 56px;
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-bottom: 8px;
   }
 
   .menu-trigger:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
-  
+
   .dropdown-menu{
     border-radius: 10px;
     width: 356px;
@@ -96,6 +97,7 @@
   .dropdown-menu ul li{
     padding: 10px 0;
     border-bottom: .5px solid rgba(0, 0, 0, 0.05);
+    text-decoration: none;
   }
   
   .dropdown-menu ul li:hover a{
@@ -106,6 +108,8 @@
   .dropdownItem{
     display: flex;
     margin: 10px auto;
+    text-align: left;
+    
   }
   
   .dropdownItem a{

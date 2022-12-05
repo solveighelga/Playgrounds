@@ -12,8 +12,10 @@ import './Dropdownbtn.css'
 function Dropdown({setFilter, filter}) {
 
   const [open, setOpen] = useState(false); // By default the drop down is not open (dropdown open = false)
+  
+  // Here doFilter filters through the postal when clicked on and chenges the open state
   const doFilter = (postal)=>{ // ef við click-um á 101 eða 104 þá filterast
-    setFilter({...filter,postal}) //parameter sem heitir postal er notað hér
+    setFilter({...filter,postal}) //parameter sem heitir postal er notað hér 
     setOpen(!open);
     console.log(postal);
   }
@@ -48,7 +50,7 @@ function Dropdown({setFilter, filter}) {
             <ul>
               {/* added the function to the onClick to filter to filter and find 101 and 104 in our API */}
               <li onClick={()=>{doFilter('101')}}><DropdownItem text = {'101 - Downtown'}/></li> 
-              <li onClick={()=>{doFilter('104')}}><DropdownItem text = {'104'}/></li>
+              <li onClick={()=>{doFilter('104')}}><DropdownItem text = {'104 - Laugadalur'}/></li>
             </ul>
             
           </div> 
