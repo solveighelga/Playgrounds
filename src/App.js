@@ -1,5 +1,8 @@
 import './App.css';
 import './App.scss';
+//import swing from './Images/swing'
+//import ballfield from './Images/ballfield'
+//import jumppad from './Images/jumppad'
 import swingIconMobile from './Images/swingIconMobile.svg'
 import footballIconMobile from './Images/footballIconMobile.svg'
 import jumppadIconMobile from './Images/jumppadIconMobile.svg'
@@ -18,6 +21,11 @@ function App() {
   const [playgrounds, setPlaygrounds] = useState([]); 
   const [filterPlaygrounds, setFilterPlaygrounds] = useState([]); 
   console.log(filterPlaygrounds);
+
+  //const [sButton, setsButton] = useState(swing);
+  //const [bButton, setbButton] = useState(ballfield);
+  //const [jButton, setjButton] = useState(jumppad);
+
 
 /*Clickable feature of swing, football and jumppad icons*/
   const [sIcon, setsIcon] = useState(swingIconMobile);
@@ -58,6 +66,10 @@ console.log (window.screen.width)
           <Dropdown playgrounds={playgrounds} setFilterPlaygrounds={setFilterPlaygrounds} />
       </div>
       </div>
+        <button>
+          <svg></svg>
+        </button>
+
       <div className='Icons'>
         <div className='grow'>
           <div className='swing'>
@@ -67,7 +79,7 @@ console.log (window.screen.width)
             <img onClick={changefIcon} src={fIcon}></img>
           </div>
           <div className='jumppad'>
-            <img onClick={changejIcon} src={jIcon}></img>
+          <img onClick={changejIcon} src={jIcon}></img>
           </div>
         </div>
       </div>
