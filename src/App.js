@@ -20,6 +20,7 @@ function App() {
   const [playgrounds, setPlaygrounds] = useState([]); 
   const [filterPlaygrounds, setFilterPlaygrounds] = useState([]); 
   console.log(filterPlaygrounds);
+  console.log(playgrounds);
 
 /*Clickable feature of swing, football and jumppad icons*/
   const [sIcon, setsIcon] = useState(swingIconMobile);
@@ -46,14 +47,7 @@ function App() {
   return (
     <div className='App'>
       <div className='nav-bar'>
-        <div className='logo'>
-          {window.screen.width>768?(
-            <img src={logo} alt='Playgrounds logo'></img>
-          ):(
-            <img src={logo2} alt='Playgrounds logo'></img>
-          )}
-          
-        </div>
+        <img className='logo' src={logo} alt='Playgrounds logo'></img>
         <div className='Dropdown'>
           {/* this is referencing the compnent in dropdown.js */}
           <Dropdown playgrounds={playgrounds} setFilterPlaygrounds={setFilterPlaygrounds} />
@@ -75,11 +69,15 @@ function App() {
       <div className='Card'>
         {/* this is referencing the compnent in api.js (props used in api.js) */}
         <Api playgrounds={filterPlaygrounds} setPlaygrounds={setPlaygrounds} setFilterPlaygrounds={setFilterPlaygrounds} hasFilter={playgrounds.length!=filterPlaygrounds.length}/>
-            <Overlay></Overlay>
       </div>
     </div>
   );
 }
 
+/*{window.screen.width>768?(
+            <img src={logo} alt='Playgrounds logo'></img>
+          ):(
+            <img src={logo2} alt='Playgrounds logo'></img>
+            )}*/
 
 export default App;

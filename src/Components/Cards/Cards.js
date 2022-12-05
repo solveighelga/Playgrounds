@@ -1,16 +1,29 @@
 import '../../App.css';
 import './Cards.scss';
-import '../Overlay/Overlay.js'
 import '../Overlay/Expand.js'
+import Overlay from '../Overlay/Overlay.js';
+import React, { useState } from 'react'
+import Modal from '../Modal';
 
 
-  const Cards = ({ playground, open }) => {
+
+  const Cards = ({ playground}) => {
+    const [open, setOpen] = useState(false);
+
+    const openModal = () => {
+        setOpen(true);
+    };
+
+    const closeModal = () => {
+        setOpen(false);
+    };
+
     return (
       <div>
         <section>
           <div className='container'>
             <div className='cards'>
-              <div className='card' onClick={open}>
+              <div className='card' onClick={openModal}>
                 <p>{playground.name}</p>
                 <p>{playground.address} {playground.postal} {playground.city}</p>
                 <div className='cardImg'>
@@ -21,6 +34,7 @@ import '../Overlay/Expand.js'
             </div>
           </div>
         </section>
+        {open && <Overlay isOpen={open} close={closeModal}>{<Modal data={playground} />}</Overlay>}
       </div>
     )  
   }
