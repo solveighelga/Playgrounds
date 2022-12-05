@@ -7,14 +7,14 @@ import jumppadIconMobile2 from '../../Images/jumppadIconMobile2.svg'
 import React, {useState} from 'react';
 //import { type } from '@testing-library/user-event/dist/type'
 
-
+// . . . spread operator object filter = postal and type 
 
 function Icons({filter, setFilter}) {
     
     /*Clickable feature of swing, football and jumppad icons*/
       const [sIcon, setsIcon] = useState(swingIconMobile);
       const changesIcon = ()=>{
-        setFilter({...filter,type:"Playground"})
+        setFilter({...filter,type:"Playground"}) //Changing the filter in app.js to type and specifically "Playground" and that eventually filters playgrounds from the data see useEffect in App.js
         if (sIcon.includes('Mobile2')){
           setsIcon(swingIconMobile)}
         else {setsIcon(swingIconMobile2)}
