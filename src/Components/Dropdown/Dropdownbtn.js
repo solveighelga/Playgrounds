@@ -9,12 +9,11 @@ import './Dropdownbtn.css'
 //}
 
 // The dropdown component
-function Dropdown({playgrounds, setFilterPlaygrounds}) {
+function Dropdown({playgrounds, setFilter, filter}) {
 
   const [open, setOpen] = useState(false); // By default the drop down is not open (dropdown open = false)
-  const filter = (postal)=>{
-    const postalSelect = playgrounds.filter(playground => playground.postal == postal);
-    setFilterPlaygrounds(postalSelect);
+  const doFilter = (postal)=>{
+    setFilter({...filter,postal})
     setOpen(!open);
     console.log(postal);
   }
@@ -48,8 +47,8 @@ function Dropdown({playgrounds, setFilterPlaygrounds}) {
           <div className={`dropdown-menu ${open? 'active' : 'inactive'}`}>
             <ul>
               {/* added the function to the onClick to filter to filter and find 101 and 104 in our API */}
-              <li onClick={()=>{filter('101')}}><DropdownItem text = {'101 - Downtown'}/></li> 
-              <li onClick={()=>{filter('104')}}><DropdownItem text = {'104'}/></li>
+              <li onClick={()=>{doFilter('101')}}><DropdownItem text = {'101 - Downtown'}/></li> 
+              <li onClick={()=>{doFilter('104')}}><DropdownItem text = {'104'}/></li>
             </ul>
             
           </div> 

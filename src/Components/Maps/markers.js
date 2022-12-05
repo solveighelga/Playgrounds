@@ -1,8 +1,10 @@
-
+import supabase from '../../supabaseClient'
+import Api from '../Cards/api'
 
 
 // Custom markers for each area / playgrounds
 let markers = [
+  
     {
       id: 1.1,
       name: "Reykjavík",
