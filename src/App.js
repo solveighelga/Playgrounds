@@ -6,7 +6,10 @@ import React, {useState, useEffect} from 'react';
 import Dropdown from './Components/Dropdown/Dropdownbtn.js'
 import supabase from './supabaseClient';
 import Api from './Components/Cards/api';
+import Overlay from './Components/Overlay/Overlay.js'
+import Expand from './Components/Overlay/Expand.js';
 import Icons from './Components/Icons/icons'
+
 
 function App() {
 // These states are used as props in the api and dropdown components here below
@@ -14,6 +17,7 @@ function App() {
   const [filter, setFilter] = useState({}); 
   const [filterPlaygrounds, setFilterPlaygrounds] = useState([]); 
   console.log(filterPlaygrounds);
+  console.log(playgrounds);
   console.log(filter);
 
 
@@ -33,14 +37,7 @@ useEffect (()=> {
   return (
     <div className='App'>
       <div className='nav-bar'>
-        <div className='logo'>
-          {window.screen.width>768?(
-            <img src={logo} alt='Playgrounds logo'></img>
-          ):(
-            <img src={logo2} alt='Playgrounds logo'></img>
-          )}
-          
-        </div>
+        <img className='logo' src={logo} alt='Playgrounds logo'></img>
         <div className='Dropdown'>
           {/* this is referencing the compnent in dropdown.js */}
           <Dropdown playgrounds={filterPlaygrounds} setFilter={setFilter} filter={filter}/>
@@ -57,6 +54,10 @@ useEffect (()=> {
   );
 }
 
-
+/*{window.screen.width>768?(
+            <img src={logo} alt='Playgrounds logo'></img>
+          ):(
+            <img src={logo2} alt='Playgrounds logo'></img>
+            )}*/
 
 export default App;
