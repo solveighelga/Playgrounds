@@ -1,0 +1,121 @@
+#image2 {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  margin-top: -260px;
+}
+
+#image3 {
+  margin-left: -350px;
+  display: none;
+}
+
+#container {
+  display: flex;
+}
+
+.start {
+  position: relative;
+  bottom: 80px;
+  border-radius: 6px;
+  border-style: none;
+  padding: 8px 20px 8px 2px;
+  background-color: white;
+  box-shadow: -1px 1px 5px 0.1px rgba(0, 0, 0, 0.75);
+}
+
+.start:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+#down {
+  width: 10px;
+  margin-left: 200px;
+}
+
+#intro {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  #image1 {
+    width: 100%;
+    height: auto;
+  }
+  #image2 {
+    display: block;
+  }
+  #logo {
+    position: relative;
+    bottom: 100px;
+    width: 50%;
+    margin: auto;
+    display: block;
+  }
+  #intro {
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1080px) {
+  #image1 {
+    width: auto;
+    height: 100vh;
+    max-width: 830px;
+    min-width: 601px;
+  }
+  #image2 {
+    display: none;
+  }
+  #image3 {
+    display: block;
+  }
+  #logo {
+    position: relative;
+    bottom: 100px;
+    width: 75%;
+    display: block;
+    padding-left: 80px;
+  }
+  #intro {
+    padding-left: 200px;
+    display: block;
+    margin: -600px auto;
+  }
+  .start {
+    margin: auto;
+    display: block;
+  }
+}
+@media screen and (min-width: 1081px) {
+  #image1 {
+    width: auto;
+    height: 100vh;
+    max-width: 830px;
+    min-width: 601px;
+  }
+  #image2 {
+    display: none;
+  }
+  #image3 {
+    display: block;
+  }
+  #intro {
+    padding-left: 200px;
+    display: block;
+    margin: -600px auto;
+  }
+  #logo {
+    position: relative;
+    bottom: 100px;
+    width: 85%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .start {
+    margin: auto;
+    display: block;
+  }
+}/*# sourceMappingURL=home.css.map */

@@ -1,49 +1,45 @@
 import './App.css';
 import './App.scss';
 import logo from './Images/PLAYGROUNDS.svg'
-import logo2 from './Images/PLAY.svg'
 import React, {useState, useEffect} from 'react';
 import Dropdown from './Components/Dropdown/Dropdownbtn.js'
 import supabase from './supabaseClient';
 import Api from './Components/Cards/api';
+import Overlay from './Components/Overlay/Overlay.js'
+import Expand from './Components/Overlay/Expand.js';
 import Icons from './Components/Icons/icons'
+
 
 function App() {
 // These states are used as props in the api and dropdown components here below
-  const [playgrounds, setPlaygrounds] = useState([]); 
-  const [filter, setFilter] = useState({}); 
-  const [filterPlaygrounds, setFilterPlaygrounds] = useState([]); 
-  console.log(filterPlaygrounds);
+  const [playgrounds, setPlaygrounds] = useState([]); // rendering the site we need to call on playgrounds because it is coming from another site
+  const [filter, setFilter] = useState({}); // always when the filter on dropdown and button to change the filter
+  const [filterPlaygrounds, setFilterPlaygrounds] = useState([]); // the array we change depending on the filter
+  
+  console.log(playgrounds);
   console.log(filter);
-
-
-console.log (window.screen.width)
-
+  console.log(filterPlaygrounds);
+ 
+// filter through playgrounds
 useEffect (()=> {
   const postalSelect = playgrounds.filter(playground => {
-    const postal=filter.postal===undefined || playground.postal == filter.postal
-    const type=filter.type===undefined || playground.type == filter.type
-    return (postal && type)
+    const postal=filter.postal===undefined || playground.postal == filter.postal //undefined because we want all the results = true OR playgroun (101) is the same as the filter (101)
+    const type=filter.type===undefined || playground.type == filter.type // same for type
+    return (postal && type) // if return true we want to unclude postal and type of playground 
   });
-  setFilterPlaygrounds(postalSelect)
-//run  useEffect everytime fitler changes
+  setFilterPlaygrounds(postalSelect) 
+//run useEffect everytime fitler changes and we choose a different filter to open
 },[filter]
 )
 
   return (
     <div className='App'>
       <div className='nav-bar'>
-        <div className='logo'>
-          {window.screen.width>768?(
-            <img src={logo} alt='Playgrounds logo'></img>
-          ):(
-            <img src={logo2} alt='Playgrounds logo'></img>
-          )}
-          
-        </div>
+        <img className='logo' src={logo} alt='Playgrounds logo'></img>
         <div className='Dropdown'>
           {/* this is referencing the compnent in dropdown.js */}
-          <Dropdown playgrounds={filterPlaygrounds} setFilter={setFilter} filter={filter}/>
+          {/* orange: PROPS , green/white: VALUE which props gets */}
+          <Dropdown setFilter={setFilter} filter={filter}/> 
       </div>
       </div>
 
@@ -59,6 +55,10 @@ useEffect (()=> {
   );
 }
 
-
+/*{window.screen.width>768?(
+            <img src={logo} alt='Playgrounds logo'></img>
+          ):(
+            <img src={logo2} alt='Playgrounds logo'></img>
+            )}*/
 
 export default App;

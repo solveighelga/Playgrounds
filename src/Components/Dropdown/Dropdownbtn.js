@@ -9,11 +9,11 @@ import './Dropdownbtn.css'
 //}
 
 // The dropdown component
-function Dropdown({playgrounds, setFilter, filter}) {
+function Dropdown({setFilter, filter}) {
 
   const [open, setOpen] = useState(false); // By default the drop down is not open (dropdown open = false)
-  const doFilter = (postal)=>{
-    setFilter({...filter,postal})
+  const doFilter = (postal)=>{ // ef við click-um á 101 eða 104 þá filterast
+    setFilter({...filter,postal}) //parameter sem heitir postal er notað hér
     setOpen(!open);
     console.log(postal);
   }
@@ -40,8 +40,8 @@ function Dropdown({playgrounds, setFilter, filter}) {
       <div>
         <div className='menu-container' ref={menuRef}> 
           <div className='menu-trigger' onClick={()=>{setOpen(!open)}}> 
-          {/* The first city in our API (Reykjavík) will appear on the drop down */}
-            {playgrounds.length? playgrounds[0].city: null}
+          {/* The first city in our API (Reykjavík) will appear on the dropdown */}
+            {"Reykjavík"}
           </div>
         
           <div className={`dropdown-menu ${open? 'active' : 'inactive'}`}>
