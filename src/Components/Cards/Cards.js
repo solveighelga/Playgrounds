@@ -5,8 +5,8 @@ import './Cards.scss';
     return (
 
 
-      <div>
-        <section>
+      <div className='cardStyle'>
+
           <div className='container'>
             <div className='cards'>
               <div className='card'>
@@ -18,7 +18,7 @@ import './Cards.scss';
               </div>
             </div>
           </div>
-        </section>
+
       </div>
     )  
   }
