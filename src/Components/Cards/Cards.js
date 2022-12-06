@@ -19,6 +19,8 @@ import Modal from '../Modal';
     };
 
     return (
+
+
       <div>
         <section>
           <div className='container'>
@@ -27,8 +29,8 @@ import Modal from '../Modal';
                 <p>{playground.name}</p>
                 <p>{playground.address} {playground.postal} {playground.city}</p>
                 <div className='cardImg'>
-                  <img className='imgURL' src={playground.photoURL}></img>
-                  <div className='map'></div>
+                    <img className='mapURL' src={playground.mapURL}></img>
+                    <img className='imgURL' src={playground.photoURL}></img>
                 </div>
               </div>
             </div>
