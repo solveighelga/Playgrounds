@@ -34,7 +34,7 @@ import Modal from '../Modal';
               </div>
             </div>
           </div>
-        </section>
+          
         {open && <Overlay isOpen={open} close={closeModal}>{<Modal data={playground} />}</Overlay>}
       </div>
     )  
