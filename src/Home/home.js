@@ -10,7 +10,7 @@ import arrow from './down.png';
 
 const Home = function() {
     const [open, setOpen] = useState(false); // By default the drop down is not open (dropdown open = false)
-      setOpen(!open);
+    /*const [rotate, setRotate] = useState(false);*/
 
     return (
     <div id="main">
@@ -44,7 +44,14 @@ const Home = function() {
       
       </div> 
         <div className='menu-container1'>
-            <div className='menu-trigger1' onClick={() =>{setOpen(!open)}}>
+            <div className='menu-trigger1' onClick={() =>{setOpen(!open)/*, setRotate(!rotate)*/}}> Select City
+        
+                <img /*className={`imgrotate ${rotate? 'active' : 'inactive'}`}*/
+
+                    alt='Arrow' 
+                    id="down"
+                    src={arrow}
+                />
             </div>
             <div className={`dropdown-menu1 ${open? 'active' : 'inactive'}`}>
                 <ul>
@@ -52,15 +59,9 @@ const Home = function() {
                 </ul>
             </div>
         </div>
-    </div>
+        </div>
     )
 }
-      
-           /* <img
-                alt='Arrow' 
-                id="down"
-                src={arrow}
-            />*/
       
 
     function DropdownItem1(props){
