@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/playgrounds/static/css/main.71141700.css",
+    "main.js": "/playgrounds/static/js/main.c455f1ab.js",
+    "static/media/kid.png": "/playgrounds/static/media/kid.e2ddf3bc4f871067ed52.png",
+    "static/media/desktoplogo.png": "/playgrounds/static/media/desktoplogo.98e4f2d4fbf2131ffd12.png",
+    "static/media/logo.png": "/playgrounds/static/media/logo.394412b3bb8f83164c6d.png",
+    "static/media/mobile1.png": "/playgrounds/static/media/mobile1.c677a6d7209b9dea62f2.png",
+    "static/media/PLAYGROUNDS.svg": "/playgrounds/static/media/PLAYGROUNDS.b5f0a63c7d0ed544548f5784430ee492.svg",
+    "static/media/jumppadIconMobile2.svg": "/playgrounds/static/media/jumppadIconMobile2.94964ca12074f352d25ab40418b678d1.svg",
+    "static/media/jumppadIconMobile.svg": "/playgrounds/static/media/jumppadIconMobile.24a43e0e11bc15b30a2bfb0f28118e98.svg",
+    "static/media/swingIconMobile2.svg": "/playgrounds/static/media/swingIconMobile2.59198102be9a09fed4c4b99f18db280a.svg",
+    "static/media/swingIconMobile.svg": "/playgrounds/static/media/swingIconMobile.34d325cef721083789bb577501679928.svg",
+    "static/media/footballIconMobile2.svg": "/playgrounds/static/media/footballIconMobile2.d27f32555e358e3fb77469c00ff61089.svg",
+    "static/media/footballIconMobile.svg": "/playgrounds/static/media/footballIconMobile.c78f5786acb41cc66ac36cbf64a3f978.svg",
+    "index.html": "/playgrounds/index.html",
+    "main.71141700.css.map": "/playgrounds/static/css/main.71141700.css.map",
+    "main.c455f1ab.js.map": "/playgrounds/static/js/main.c455f1ab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71141700.css",
+    "static/js/main.c455f1ab.js"
+  ]
+}
