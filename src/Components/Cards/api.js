@@ -32,14 +32,16 @@ const Api = ({playgrounds, setPlaygrounds, setFilterPlaygrounds, hasFilter}) => 
         <div>
             {fetchError && (<p>{fetchError}</p>)}
             {playgrounds && (
-                <div className ="playgrounds"> 
-                {/* If filtered the postal code and neighborhood will appear if not, then it is empty */}
-                <div className ="filter">{hasFilter? playgrounds[0].postal + " - " + playgrounds[0].neighborhood: null}</div>
-                    <div className="playground-grid"> </div>
-                    {playgrounds.map(playground => (
-                        <Card key ={playground.pid} playground={playground} />
-                    ))}
-                </div>
+                <>
+                    <div className ="filter">{hasFilter? playgrounds[0].postal + " - " + playgrounds[0].neighborhood: null}</div>
+                    <div className ="playgrounds"> 
+                    {/* If filtered the postal code and neighborhood will appear if not, then it is empty */}
+                        <div className="playground-grid"> </div>
+                        {playgrounds.map(playground => (
+                            <Card key ={playground.pid} playground={playground} />
+                        ))}
+                    </div>
+                </>
             )}
         </div>
 

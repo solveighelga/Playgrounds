@@ -70,16 +70,16 @@
     align-items: center;
   }*/
   
-  @media only screen and (min-width: 805px) {
-    .section{
-      flex-direction: column;
-    }
+  // @media only screen and (min-width: 805px) {
+  //   .section{
+  //     flex-direction: column;
+  //   }
 
     .swing, .football, .jumppad {
       width: 70px;
       height: 70px;
     }
-  }
+  
 
   @media only screen and (min-width: 1200px) {
     .swing, .football, .jumppad {
@@ -90,7 +90,7 @@
  
   .cards{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }

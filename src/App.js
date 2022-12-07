@@ -40,11 +40,10 @@ useEffect (()=> {
           {/* this is referencing the compnent in dropdown.js */}
           {/* orange: PROPS , green/white: VALUE which props gets */}
           <Dropdown setFilter={setFilter} filter={filter}/> 
-      </div>
+        </div>
       </div>
 
       <Icons playgrounds={filterPlaygrounds} setFilter={setFilter} filter={filter}/>
-
       <div className='cardStyle'>
         <div className='Card'>
           {/* this is referencing the component in api.js (props used in api.js) */}
