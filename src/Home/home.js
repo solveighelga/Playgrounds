@@ -7,11 +7,10 @@ import mobile from './mobile1.png';
 import logo from './logo.png';
 import arrow from './down.png';
 
-const Home = function() {
 
-const [open, setOpen] = useState(false); // By default the drop down is not open (dropdown open = false)
-    setOpen(!open);   
-    
+const Home = function() {
+    const [open, setOpen] = useState(false); // By default the drop down is not open (dropdown open = false)
+      setOpen(!open);
 
     return (
     <div id="main">
@@ -43,39 +42,34 @@ const [open, setOpen] = useState(false); // By default the drop down is not open
             src={logo}
         />    
       
+      </div> 
         <div className='menu-container1'>
-          <div className='menu-trigger1' onClick={()=>{setOpen(!open)}}> 
-            {"Reykjavík"}
-          </div>
-        
-          <div className={`dropdown-menu1 ${open? 'active' : 'inactive'}`}>
-            <ul>
-              <li onClick={()=>{}}><DropdownItem1 text = {'Reykjavík'}/></li> 
-            </ul>
-          </div> 
+            <div className='menu-trigger1' onClick={() =>{setOpen(!open)}}>
+            </div>
+            <div className={`dropdown-menu1 ${open? 'active' : 'inactive'}`}>
+                <ul>
+                    <li><DropdownItem1 text = {'Reykjavík'} /></li>
+                </ul>
+            </div>
         </div>
+    </div>
+    )
+}
       
-            <img
+           /* <img
                 alt='Arrow' 
                 id="down"
                 src={arrow}
-            />
+            />*/
       
-      
-    </div>
-  </div>
-    );
-}
 
-function DropdownItem1(props){
-    return(
-      <li className='dropdownItem1'>
-        <a>{props.text}</a>
-      </li>
-    );
-  }
-
-/*<button class="start">       
-            Select City*/
+    function DropdownItem1(props){
+        return(
+        <li className='dropdownItem1'>
+            <a>{props.text}</a>
+        </li>
+        );
+    }
 
 export default Home;
+      
