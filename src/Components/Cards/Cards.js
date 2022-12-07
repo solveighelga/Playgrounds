@@ -21,13 +21,12 @@ import Modal from '../Modal';
     return (
 
 
-      <div>
-        <section>
+      <div className='cardStyle'>
+
           <div className='container'>
             <div className='cards'>
               <div className='card' onClick={openModal}>
-                <p>{playground.name}</p>
-                <p>{playground.address} {playground.postal} {playground.city}</p>
+                <p>{playground.address}</p>
                 <div className='cardImg'>
                     <img className='mapURL' src={playground.mapURL}></img>
                     <img className='imgURL' src={playground.photoURL}></img>
@@ -35,7 +34,7 @@ import Modal from '../Modal';
               </div>
             </div>
           </div>
-        </section>
+          
         {open && <Overlay isOpen={open} close={closeModal}>{<Modal data={playground} />}</Overlay>}
       </div>
     )  

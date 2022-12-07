@@ -45,9 +45,11 @@ useEffect (()=> {
 
       <Icons playgrounds={filterPlaygrounds} setFilter={setFilter} filter={filter}/>
 
-      <div className='Card'>
-        {/* this is referencing the component in api.js (props used in api.js) */}
-        <Api playgrounds={filterPlaygrounds} setPlaygrounds={setPlaygrounds} setFilterPlaygrounds={setFilterPlaygrounds} hasFilter={playgrounds.length!=filterPlaygrounds.length}/>
+      <div className='cardStyle'>
+        <div className='Card'>
+          {/* this is referencing the component in api.js (props used in api.js) */}
+          <Api playgrounds={filterPlaygrounds} setPlaygrounds={setPlaygrounds} setFilterPlaygrounds={setFilterPlaygrounds} hasFilter={playgrounds.length!=filterPlaygrounds.length}/>
+        </div>
       </div>
     </div>
   );
