@@ -1,41 +1,63 @@
 .modal {
     width: 356px;
     height: 632px;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 200px;
+    /*align-items: center;
+    justify-content: center;*/
+    margin-top: 100px;
     margin-left: 10px;
 }
 
 .address {
-    margin-top: 20px;
+    margin-left: -140px;
+}
+
+.thePhotos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #58676D;
+    border-radius: 10px;
+    width: 316px;
+    height: 180px;
 }
 
 .photo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 20px;
+    border-radius: 8px;
+    width: 312px;
+    height: 176px;
+}
+
+.equipment {
+    margin-left: -235px;
+
 }
 
 .icons10 {
     display: flex;
-    align-items: center;
-    margin-bottom: 250px;
+    margin-bottom: 50px;
     justify-content: space-between;
+    margin-left: -140px;
 }
 
 .regularswing {
-    margin: 20px;
+    margin: 10px;
 }
 
 .slide {
-    margin: 20px;
+    margin: 10px;
 }
 
 .rocker {
-    margin: 20px;
+    margin: 10px;
 }
 
 
@@ -61,4 +83,20 @@
         align-items: center;
         padding: 30px;
     }
+}
+
+.themap {
+    display: fixed;
+    justify-content: center;
+    align-items: center;
+    border: solid #58676D;
+    border-radius: 10px;
+    width: 316px;
+    height: 180px;
+}
+
+.googlemap {
+   width: 316px;
+   height: 176px;
+   border-radius: 10px;
 }

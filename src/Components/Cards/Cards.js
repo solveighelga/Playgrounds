@@ -28,7 +28,7 @@ import Modal from '../Modal';
               <div className='card' onClick={openModal}>
                 <p>{playground.address}</p>
                 <div className='cardImg'>
-                    <img className='mapURL' src={playground.mapURL}></img>
+                    <img className='mapBig' src={playground.mapBig}></img>
                     <img className='imgURL' src={playground.photoURL}></img>
                 </div>
               </div>
