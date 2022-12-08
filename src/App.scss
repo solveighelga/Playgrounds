@@ -7,6 +7,7 @@ font-weight: 500;
 font-size: 64px;
 line-height: 87px;
 font-feature-settings: 'ss01' 1;
+text-align: center;
 }
 
 .cardStyle {
@@ -24,4 +25,5 @@ font-feature-settings: 'ss01' 1;
     flex-wrap: wrap;
     justify-content: center;
     background: linear-gradient(#ffff, #dfce2b);
+    padding-bottom: 10%;
 }
