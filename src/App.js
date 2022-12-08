@@ -11,7 +11,7 @@ const App=()=>{
     main:<Main setRoute={setRoute}/>,
     map:<Map/>,
   }
-console.log(route)
+
   return (
   <React.StrictMode>
     <ChakraProvider theme={theme}>

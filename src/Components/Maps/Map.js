@@ -32,7 +32,6 @@ function Map({inCard, coord, setOpenMap}) {
     googleMapsApiKey: 'AIzaSyDa96QN-KoPRMzs1MkT7w8DlC4lJfmXOgY',
     libraries: ['places'],  
   })
-    console.log(coord)
   const [iconSize, setIconSize] = useState({width: 32, height: 32});
 
   const [latitude, setLatitude] = useState('');
