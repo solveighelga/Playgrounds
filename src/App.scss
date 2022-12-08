@@ -1,0 +1,22 @@
+.filter {
+  font-family: nunito;  
+  font-style: normal;
+  font-size: 64px;
+  line-height: 87px;
+}
+
+.cardStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Card {
+    width: 1500px;
+}
+
+.playgrounds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
