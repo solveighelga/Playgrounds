@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;900&display=swap');
 
 .filter {
-  font-weight: 500; 
-  font-family: 'Nunito', sans-serif;
-  font-style: normal;
-  font-size: 64px;
-  line-height: 87px;
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 500;
+font-size: 64px;
+line-height: 87px;
+font-feature-settings: 'ss01' 1;
 }
 
 .cardStyle {
