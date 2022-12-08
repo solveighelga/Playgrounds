@@ -1,10 +1,10 @@
 import React from 'react'
 import './Modal.css'
+import Map from './Maps/Map'
 
 
 const Modal = ({ data, close}) => {
 
-/*const onClickHandler = () => {} {*/
 
   return (
     <div className='modal'>
@@ -19,8 +19,8 @@ const Modal = ({ data, close}) => {
         <img className='rocker' src={data.springRocker}></img>
       </div>
 
-      <div className='themap'>        
-        <img className='googlemap' /*onClick={onClickHandler}*/ src={data.mapBig}></img> 
+      <div className='themap'>    
+        <Map inCard={true} coord={{lat:data.lat, lng:data.lng}}/>    
       </div>
     </div>
   )
