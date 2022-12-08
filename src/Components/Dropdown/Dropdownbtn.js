@@ -48,7 +48,7 @@ function Dropdown({setFilter, filter}) {
             <ul>
               {/* added the function to the onClick to filter to filter and find 101 and 104 in our API */}
               <li onClick={()=>{doFilter('101')}}><DropdownItem text = {'101 - Downtown'}/></li> 
-              <li onClick={()=>{doFilter('104')}}><DropdownItem text = {'104'}/></li>
+              <li onClick={()=>{doFilter('104')}}><DropdownItem text = {'104 - Laugardalur'}/></li>
             </ul>
             
           </div> 
