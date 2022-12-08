@@ -43,20 +43,13 @@
 
 .icons10 {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 50px;
     justify-content: space-between;
-    margin-left: -140px;
+    /* margin-left: -140px; */
 }
 
-.regularswing {
-    margin: 10px;
-}
-
-.slide {
-    margin: 10px;
-}
-
-.rocker {
+.regularswing .slide .rocker .infantSwing .basketSwing .tireSwing .playhouse .playhousePole .CastleSlide .castleMonkeyBars .climbingNet .seasaw .carousel .trampoline .bench{
     margin: 10px;
 }
 
