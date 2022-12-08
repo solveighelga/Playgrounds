@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;900&display=swap');
+
+.filter {
+  font-weight: 500; 
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 87px;
+}
+
+.cardStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Card {
+    width: 1500px;
+}
+
+.playgrounds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(#ffff, #dfce2b);
+}
