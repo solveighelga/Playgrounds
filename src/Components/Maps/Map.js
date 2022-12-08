@@ -25,21 +25,21 @@ import markers from './markers';
 
 
 
-function Map() {
+function Map({inCard, coord}) {
   
   //Google Maps API key activation
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: 'AIzaSyDa96QN-KoPRMzs1MkT7w8DlC4lJfmXOgY',
     libraries: ['places'],  
   })
-    
+    console.log(coord)
   const [iconSize, setIconSize] = useState({width: 32, height: 32});
 
   const [latitude, setLatitude] = useState('');
   const [longitude, setLongitude] = useState('');
   
   //Configuration for the location window
-  const [displayBox, setDisplayBox] = useState('block');
+  const [displayBox, setDisplayBox] = useState('none');
   const [Icons, setIcons] = useState(true);
 
   //Configuration for the current position input window (Origin)
@@ -51,6 +51,14 @@ function Map() {
   
   //Current position
   React.useEffect(() => {
+    if (inCard){
+      const lat=Number(coord.lat)
+      const lng=Number(coord.lng)
+      setLatitude(lat);
+      setLongitude(lng);
+      setOrigin(`${lat},${lng}`);
+      return 
+    }
     navigator.geolocation.getCurrentPosition((position) => {
       setLatitude(position.coords.latitude);
       setLongitude(position.coords.longitude);
@@ -168,7 +176,7 @@ function Map() {
           onZoomChanged={handleZoomChanged} 
             
           //Map size + mapID and other configuration
-          mapContainerStyle={{ width: '100%', height: '50%' }}
+          mapContainerStyle={inCard?{width: '316px', height: '176px'}:{ width: '100%', height: '50%' }}
           options={{
             mapId: 'f4ce3575160e107d',
             streetViewControl: false,
