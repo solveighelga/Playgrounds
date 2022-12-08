@@ -7,15 +7,15 @@ import Modal from '../Modal';
 
 
 
-  const Cards = ({ playground}) => {
+  const Cards = ({ playground, setRoute}) => {
     const [open, setOpen] = useState(false);
 
     const openModal = () => {
         setOpen(true);
     };
 
-    const closeModal = () => {
-        setOpen(false);
+    const closeModal = (e) => {
+        e.target.id==='overlay' && setOpen(false);
     };
 
     return (
@@ -35,7 +35,7 @@ import Modal from '../Modal';
             </div>
           </div>
           
-        {open && <Overlay isOpen={open} close={closeModal}>{<Modal data={playground} />}</Overlay>}
+        {open && <Overlay isOpen={open} close={closeModal}>{<Modal data={playground} setRoute={setRoute} />}</Overlay>}
       </div>
     )  
   }

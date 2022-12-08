@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Card from './Cards'
 
 // these props act as a parameter to the function
-const Api = ({playgrounds, setPlaygrounds, setFilterPlaygrounds, hasFilter}) => {
+const Api = ({playgrounds, setPlaygrounds, setFilterPlaygrounds, hasFilter, setRoute}) => {
     const [fetchError, setFetchError] = useState(null)
 
     useEffect(() => {
@@ -38,7 +38,7 @@ const Api = ({playgrounds, setPlaygrounds, setFilterPlaygrounds, hasFilter}) => 
                     {/* If filtered the postal code and neighborhood will appear if not, then it is empty */}
                         <div className="playground-grid"> </div>
                         {playgrounds.map(playground => (
-                            <Card key ={playground.pid} playground={playground} />
+                            <Card setRoute={setRoute} key ={playground.pid} playground={playground} />
                         ))}
                     </div>
                 </>

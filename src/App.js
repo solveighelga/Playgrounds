@@ -8,10 +8,10 @@ const App=()=>{
   const [route, setRoute]=useState('home')
   const router={
     home:<Home setRoute={setRoute}/>,
-    main:<Main/>,
+    main:<Main setRoute={setRoute}/>,
     map:<Map/>,
   }
-
+console.log(route)
   return (
   <React.StrictMode>
     <ChakraProvider theme={theme}>

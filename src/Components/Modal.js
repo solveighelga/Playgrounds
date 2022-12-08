@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Modal.css'
 import Map from './Maps/Map'
 
 
-const Modal = ({ data, close}) => {
+const Modal = ({ data, close, setRoute}) => {
+  const [openMap, setOpenMap] = useState (false)
 
 
   return (
@@ -19,8 +20,8 @@ const Modal = ({ data, close}) => {
         <img className='rocker' src={data.springRocker}></img>
       </div>
 
-      <div className='themap'>    
-        <Map inCard={true} coord={{lat:data.lat, lng:data.lng}}/>    
+      <div style= {openMap?{position:'absolute', top:'0px', left:'0px'}:{}}className='themap' onClick={() => setOpenMap(true)}>    
+        <Map inCard={!openMap} coord={{lat:data.lat, lng:data.lng}}/>    
       </div>
     </div>
   )

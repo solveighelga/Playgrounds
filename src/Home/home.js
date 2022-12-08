@@ -8,7 +8,7 @@ import arrow from './down.png';
 import Splash from './Intro/splash';
 
 
-const Home = function() {
+const Home = function({setRoute}) {
     const [open, setOpen] = useState(false); // By default the drop down is not open (dropdown open = false)
     /*const [rotate, setRotate] = useState(false);*/
 
@@ -55,7 +55,7 @@ const Home = function() {
             </div>
             <div className={`dropdown-menu1 ${open? 'active' : 'inactive'}`}>
                 <ul>
-                    <li><DropdownItem1 text = {'Reykjavík'} /></li>
+                    <li onClick={() => setRoute('main')}><DropdownItem1 text = {'Reykjavík'} /></li>
                 </ul>
             </div>
         </div>
