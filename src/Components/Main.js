@@ -7,7 +7,7 @@ import Api from './Cards/api';
 import Icons from './Icons/icons'
 
 
-function Main() {
+function Main({setRoute}) {
 // These states are used as props in the api and dropdown components here below
   const [playgrounds, setPlaygrounds] = useState([]); // rendering the site we need to call on playgrounds because it is coming from another site
   const [filter, setFilter] = useState({}); // always when the filter on dropdown and button to change the filter
@@ -45,7 +45,7 @@ useEffect (()=> {
       <div className='cardStyle'>
         <div className='Card'>
           {/* this is referencing the component in api.js (props used in api.js) */}
-          <Api playgrounds={filterPlaygrounds} setPlaygrounds={setPlaygrounds} setFilterPlaygrounds={setFilterPlaygrounds} hasFilter={playgrounds.length!=filterPlaygrounds.length}/>
+          <Api setRoute={setRoute} playgrounds={filterPlaygrounds} setPlaygrounds={setPlaygrounds} setFilterPlaygrounds={setFilterPlaygrounds} hasFilter={playgrounds.length!=filterPlaygrounds.length}/>
         </div>
       </div>
     </div>

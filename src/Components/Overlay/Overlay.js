@@ -5,7 +5,7 @@ import '../Cards/Cards'*/
 
 const Overlay = ({ children, close, isOpen }) => {
   return (
-    <div className='overlay' style={isOpen? {display:'flex'}:{}}onClick={close}>
+    <div id='overlay' className='overlay' style={isOpen? {display:'flex'}:{}}onClick={close}>
         {children}
     </div>
   )

@@ -63,9 +63,14 @@ function Map({inCard, coord}) {
       setLatitude(position.coords.latitude);
       setLongitude(position.coords.longitude);
       setOrigin(`${position.coords.latitude},${position.coords.longitude}`);
+      setDestination(`${coord.lat},${coord.lng}`);
   })
-  }, [])
+  }, [inCard])
   
+  React.useEffect(() => {
+    calculateRoute()
+  },[destination])
+
   //Configuration for the map
   const [map, setMap] = useState(/** @type google.maps.Map */ (null))
   const [directionsResponse, setDirectionsResponse] = useState({});
@@ -176,7 +181,7 @@ function Map({inCard, coord}) {
           onZoomChanged={handleZoomChanged} 
             
           //Map size + mapID and other configuration
-          mapContainerStyle={inCard?{width: '316px', height: '176px'}:{ width: '100%', height: '50%' }}
+          mapContainerStyle={inCard?{width: '316px', height: '176px'}:{ width: '100%', height: '100%' }}
           options={{
             mapId: 'f4ce3575160e107d',
             streetViewControl: false,
