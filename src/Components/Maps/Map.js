@@ -195,26 +195,6 @@ function Map({inCard, coord, setOpenMap}) {
               position={center}  onClick={(e) => {
                 setOrigin(`${e.latLng.lat()},${e.latLng.lng()}`);  
           }}/>
-          
-          {markers.map(marker =>
-            <MarkerF 
-              
-              //Marker for playground locations
-              onDblClick={(e) => {
-                setDestination(`${e.latLng.lat()},${e.latLng.lng()}`)
-          }}  
-              //icon image + size adjustment
-              
-              options={{
-                icon: {
-                  url: (require('../../Images/pinkSlide.png')),
-                  scaledSize: iconSize,
-                }
-          }}
-              //Marker customization from markers.js
-              key = {marker.id} position = {marker.position}/>
-          )}
-           
   
           
             {directionsResponse && <DirectionsRenderer directions={directionsResponse} />}

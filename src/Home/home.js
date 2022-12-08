@@ -1,4 +1,4 @@
-import React,  {useEffect, useState} from 'react';
+import React,  {useEffect, useState, useRef} from 'react';
 import './home.scss';
 import './Intro/splash';
 import kid from './kid.png';
@@ -11,6 +11,18 @@ import Splash from './Intro/splash';
 const Home = function({setRoute}) {
     const [open, setOpen] = useState(false); // By default the drop down is not open (dropdown open = false)
     /*const [rotate, setRotate] = useState(false);*/
+
+    let menuRef = useRef();
+
+    useEffect(() => {
+        let handler = (e)=>{
+            if(!menuRef.current.contains(e.target)){
+            setOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handler);
+    });
 
     return (
     <div id="main">
@@ -43,7 +55,7 @@ const Home = function({setRoute}) {
         </Splash>
 
         </div> 
-        <div className='menu-container1'>
+        <div className='menu-container1' ref={menuRef}>
             <div className='menu-trigger1' onClick={() =>{setOpen(!open)/*, setRotate(!rotate)*/}}> Select City
         
                 <img /*className={`imgrotate ${rotate? 'active' : 'inactive'}`}*/
