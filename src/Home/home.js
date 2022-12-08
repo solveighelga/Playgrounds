@@ -7,7 +7,7 @@ import mobile from './mobile1.png';
 import arrow from './down.png';
 import Splash from './Intro/splash';
 
-const Home = function() {
+const Home = function(setRoute) {
     
     
 
