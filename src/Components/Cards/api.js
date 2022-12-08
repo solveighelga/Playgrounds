@@ -15,7 +15,7 @@ const Api = ({playgrounds, setPlaygrounds, setFilterPlaygrounds, hasFilter, setR
                 if (error) {
                     setFetchError('Could not fetch data')
                     setPlaygrounds(null)
-                    console.log(error)
+                    
                 }
                 if (data) {
                     setPlaygrounds(data)

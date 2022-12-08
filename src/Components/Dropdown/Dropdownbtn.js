@@ -15,7 +15,7 @@ function Dropdown({setFilter, filter}) {
   const doFilter = (postal)=>{ // ef við click-um á 101 eða 104 þá filterast
     setFilter({...filter,postal}) //parameter sem heitir postal er notað hér
     setOpen(!open);
-    console.log(postal);
+    
   }
 
   //Start of closing dropdown menu when clicking outside of the menu

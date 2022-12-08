@@ -6,7 +6,7 @@ import Map from './Maps/Map'
 const Modal = ({ data, close, setRoute}) => {
   const [openMap, setOpenMap] = useState (false)
 
-  console.log(openMap)
+
   return (
     <div className='modal'>
       <h1 className='address'>{data.address}</h1>  

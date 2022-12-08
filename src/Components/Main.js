@@ -13,9 +13,7 @@ function Main({setRoute}) {
   const [filter, setFilter] = useState({}); // always when the filter on dropdown and button to change the filter
   const [filterPlaygrounds, setFilterPlaygrounds] = useState([]); // the array we change depending on the filter
   
-  console.log(playgrounds);
-  console.log(filter);
-  console.log(filterPlaygrounds);
+ 
  
 // filter through playgrounds
 useEffect (()=> {
