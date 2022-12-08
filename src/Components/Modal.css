@@ -96,5 +96,7 @@
 }
 
 .googlemap {
-   
+   width: 316px;
+   height: 176px;
+   border-radius: 10px;
 }

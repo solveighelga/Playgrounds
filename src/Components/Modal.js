@@ -3,6 +3,9 @@ import './Modal.css'
 
 
 const Modal = ({ data, close}) => {
+
+/*const onClickHandler = () => {} {*/
+
   return (
     <div className='modal'>
       <h1 className='address'>{data.address}</h1>  
@@ -15,11 +18,13 @@ const Modal = ({ data, close}) => {
         <img className='slide' src={data.slide}></img>
         <img className='rocker' src={data.springRocker}></img>
       </div>
+
       <div className='themap'>        
-        <img className='googlemap' src={data.lat.lng}></img> 
+        <img className='googlemap' /*onClick={onClickHandler}*/ src={data.mapBig}></img> 
       </div>
     </div>
   )
 }
+
 
 export default Modal
