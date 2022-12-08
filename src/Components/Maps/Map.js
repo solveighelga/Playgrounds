@@ -10,7 +10,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 
-import { FaCar, FaLocationArrow, /* FaTimes, */ FaWalking, FaWindowRestore } from 'react-icons/fa';
+import { FaArrowCircleLeft, FaCar, FaLocationArrow, /* FaTimes, */ FaWalking, FaWindowRestore } from 'react-icons/fa';
 
 import {
   useJsApiLoader,
@@ -25,7 +25,7 @@ import markers from './markers';
 
 
 
-function Map({inCard, coord}) {
+function Map({inCard, coord, setOpenMap}) {
   
   //Google Maps API key activation
   const { isLoaded } = useJsApiLoader({
@@ -219,8 +219,20 @@ function Map({inCard, coord}) {
   
           
             {directionsResponse && <DirectionsRenderer directions={directionsResponse} />}
-          
-          
+            <HStack>
+            <Button
+            //Button in the top left corner
+            aria-label='center-back'
+            leftIcon={<FaArrowCircleLeft />}
+            size = 'lg'
+            isRound
+            color = 'red'
+            background = 'transparent'
+            
+            onClick={() => {
+              setOpenMap(false);
+            }}>Back</Button>
+          </HStack>
           <IconButton
             //Button in the top left corner
             aria-label='center back'
@@ -244,6 +256,7 @@ function Map({inCard, coord}) {
                 }
           }}
           />
+
         </GoogleMap>
       </Box>
 
