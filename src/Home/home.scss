@@ -1,4 +1,9 @@
+// @font-face {
+//     font-family: "Nunito";   
+//     src: url("../Fonts/Nunito-Black.ttf") format("truetype");
+//   }
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;900&display=swap');
 
 #image2 { 
     position: absolute;
@@ -41,8 +46,11 @@
 
   #intro {
     display: none;
-    
+  }
 
+  #logo {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
   }
 
   @media screen and (max-width: 600px) {
@@ -60,11 +68,11 @@
         display: block;
         }
     #logo {
+        font-size: 30px;
         position: relative;
         bottom: 100px;
-        width: 50%;
-        margin: auto;
-        display: block;
+        display: flex;
+        justify-content: center;
         } 
     #intro {
         display: block;
@@ -98,11 +106,11 @@
 
     #logo {
         position: relative;
-        bottom: 100px;
-        width: 75%;
+        bottom: 100px; 
+        font-size: 45px;
         display: block;
-        padding-left: 80px;
-        
+        padding-left: 30px;
+        display: flex;
         }
 
     #intro {
@@ -149,15 +157,24 @@
     #logo {
         position: relative;
         bottom: 100px;
-        width: 85%;
-        height: auto;
-        display: block;
-        margin: auto;
+        font-size: 120px; 
+        display: flex; 
+        justify-content: center;
         
         }
     .start {
       margin: auto;
       display: block;
       
+        }
+    }
+
+    @media screen and (min-width: 1550px) {
+        #logo {
+            position: relative;
+            bottom: 100px;
+            font-size: 180px;
+            display: flex; 
+            justify-content: center;
         }
     }
