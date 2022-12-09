@@ -5,8 +5,6 @@
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     display: flex;
-    /*align-items: center;
-    justify-content: center;*/
     margin-top: 100px;
     margin-left: 10px;
 }
@@ -52,13 +50,67 @@
     flex-wrap: wrap;
     margin-bottom: 50px;
     justify-content: space-between;
-    /* margin-left: -140px; */
 }
 
-.regularswing .slide .rocker .infantSwing .basketSwing .tireSwing .playhouse .playhousePole .CastleSlide .castleMonkeyBars .climbingNet .seasaw .carousel .trampoline .bench{
-    margin: 10px;
+/* Styling of the description icons */
+img.regularswing{ 
+    margin: 2px;
 }
-
+img.slide {
+    Margin:2px;
+    }
+    
+img.rocker {
+    Margin:2px;
+}
+    
+img.infantSwing {
+    Margin:2px;
+}
+    
+img.basketSwing {
+    Margin:2px;
+}
+    
+img.tireSwing {
+    Margin-left:2px;
+}
+    
+img.playhouse {
+    Margin-left:2px;
+}
+    
+img.playhousePole {
+    Margin-left: 2px;
+}
+    
+img.CastleSlide {
+    Margin-left: 2px;
+}
+    
+img.castleMonkeyBars {
+    Margin-left: 2px;
+}
+    
+img.climbingNet {
+    Margin-left: 2px;
+}
+    
+img.seasaw {
+    Margin-left: 2px;
+}
+    
+img.carousel {
+    Margin-left: 2px;
+}
+    
+img.trampoline {
+    Margin-left: 2px;
+}
+    
+img.bench{
+    Margin-left: 2px;
+}    
 
 @media only screen {
     .modal {
