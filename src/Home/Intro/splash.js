@@ -7,11 +7,11 @@ function Splash() {
     
 
     return (
-        <div className="introscreen">
+        
             <Fader>
 
             </Fader>
-        </div>    
+           
     
     );
 }

@@ -13,10 +13,10 @@
   .nav-bar{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     border-bottom: 2px solid #D9D9D9;
-    padding-bottom: 50px;
+    padding: 100px 0 100px 0;
   }
 
   @media only screen and (min-width: 768px) {
@@ -30,10 +30,9 @@
     height: 49px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px;
-    margin-bottom: -10px;
+    
+    
+   
   }
 
   @media only screen and (min-width: 768px) {
@@ -69,7 +68,7 @@
     width: 356px;
     height: 56px;
     cursor: pointer;
-    margin-top: 100px;
+    
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
 
@@ -121,7 +120,7 @@
   
   .dropdown-menu.active{
     opacity: 1;
-    visibility: visible;
+    display: block;
     transform: translateY(0);
     transition: var(--speed) ease;
     animation: mymove 1s forwards;
@@ -135,7 +134,7 @@
   
   .dropdown-menu.inactive{
     opacity: 0;
-    visibility: hidden;
+    display: none;
     transform: translateY(-20px);
     transition: var(--speed) ease;
   }
