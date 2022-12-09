@@ -16,12 +16,11 @@ import {
   useJsApiLoader,
   GoogleMap,
   MarkerF,
-  MarkerClusterer,
   Autocomplete,
   DirectionsRenderer,
 } from '@react-google-maps/api';
 import React, { useRef, useState } from 'react';
-import markers from './markers';
+
 
 
 
@@ -29,10 +28,10 @@ function Map({inCard, coord, setOpenMap}) {
   
   //Google Maps API key activation
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: 'AIzaSyDa96QN-KoPRMzs1MkT7w8DlC4lJfmXOgY',
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY,
     libraries: ['places'],  
   })
-  const [iconSize, setIconSize] = useState({width: 32, height: 32});
+  // const [iconSize, setIconSize] = useState({width: 32, height: 32});
 
   const [latitude, setLatitude] = useState('');
   const [longitude, setLongitude] = useState('');
@@ -138,7 +137,7 @@ function Map({inCard, coord, setOpenMap}) {
     // destinationRef.current.value = ''
     setDestination('');
   }
-  */
+  
   
   //Resizing icons on the map depending on zoom level
   function handleZoomChanged(){
@@ -158,7 +157,7 @@ function Map({inCard, coord, setOpenMap}) {
   }
   
   };
-
+*/
   
 
   return (
@@ -177,7 +176,7 @@ function Map({inCard, coord, setOpenMap}) {
           center={center}
           zoom={15}
           //Zoom configuration
-          onZoomChanged={handleZoomChanged} 
+          // onZoomChanged={handleZoomChanged} 
             
           //Map size + mapID and other configuration
           mapContainerStyle={inCard?{width: '316px', height: '176px'}:{ width: '100%', height: '100%' }}

@@ -1,11 +1,10 @@
 import React,  {useEffect, useState, useRef} from 'react';
 import './home.scss';
-import './Intro/splash';
 import kid from './kid.png';
 import desktoplogo from './desktoplogo.png';
 import mobile from './mobile1.png';
 import arrow from './down.png';
-import Splash from './Intro/splash';
+import Fader from '../Home/Intro/fader';
 
 
 const Home = function({setRoute}) {
@@ -50,9 +49,9 @@ const Home = function({setRoute}) {
         />
         
  
-        <Splash>
+        <Fader>
 
-        </Splash>
+        </Fader>
 
         </div> 
         <div className='menu-container1' ref={menuRef}>
